@@ -8,8 +8,7 @@ $db = new Database(
     $config['user'],
     $config['password']
 );
-
-
+require 'Response.php';
 
 // 2. Cargar el ruteo AL FINAL
 require "router.php";
