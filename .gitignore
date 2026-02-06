@@ -1,0 +1,14 @@
+# --- Base de Datos y Configuración ---
+# Nunca subas tus contraseñas o datos de conexión reales
+config.php
+
+# --- Archivos del Sistema y Editores ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# --- Archivos Temporales de PHP ---
+composer.lock
+vendor/
