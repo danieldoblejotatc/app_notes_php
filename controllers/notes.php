@@ -2,7 +2,7 @@
 
 //dd(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $heading = "My Notes";
-$currentUserId = 1;
+$currentUserId = 2;
 
 
 // $notes = $db->query("SELECT * FROM notes WHERE user_id = 2")->fetchAll();
@@ -12,6 +12,8 @@ $currentUserId = 1;
 $notes = $db->query("SELECT * FROM notes WHERE user_id = :user_id", [
     'user_id' => $currentUserId
 ])->fetchAll();
+
+dd($notes);
 
 
 require 'views/notes.view.php';

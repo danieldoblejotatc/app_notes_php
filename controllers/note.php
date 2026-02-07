@@ -2,7 +2,7 @@
 
 //dd(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $heading = "Note";
-$currentUserId = 1; // El ID del usuario logueado actualmente
+$currentUserId = 2; // El ID del usuario logueado actualmente
 
 
 
