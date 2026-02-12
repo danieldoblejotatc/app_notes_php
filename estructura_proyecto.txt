@@ -1,29 +1,40 @@
 ESTRUCTURA DEL PROYECTO
-Generado el: 2026-02-06 01:11:14
+Generado el: 2026-02-12 00:39:49
 ==============================
 
 app_notas_pract\
+├── .gitignore
 ├── .htaccess
 ├── Database.php
+├── README.md
+├── Response.php
+├── Validator.php
 ├── config.php
 ├── controllers
 │   ├── about.php
 │   ├── contact.php
 │   ├── index.php
-│   ├── note.php
-│   └── notes.php
+│   └── notes
+│       ├── create.php
+│       ├── index.php
+│       └── show.php
 ├── estructura_proyecto.txt
+├── exportador_proyecto.php
 ├── functions.php
-├── index.php
+├── public
+│   └── index.php
 ├── router.php
+├── routes.php
 └── views
     ├── 403.php
     ├── 404.php
     ├── about.view.php
     ├── contact.view.php
     ├── index.view.php
-    ├── note.view.php
-    ├── notes.view.php
+    ├── notes
+    │   ├── note-create.view.php
+    │   ├── note.view.php
+    │   └── notes.view.php
     └── partials
         ├── banner.php
         ├── footer.php

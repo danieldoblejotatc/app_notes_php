@@ -19,7 +19,6 @@ function routeToController($uri, $routes, $db)
     if (array_key_exists($uri, $routes)) {
         // Usamos base_path para obtener la ruta absoluta desde la raíz
         $path = base_path($routes[$uri]);
-
         if (file_exists($path)) {
             require $path;
         } else {

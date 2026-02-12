@@ -1,7 +1,16 @@
-RewriteEngine On
-RewriteBase /app_notas_pract/
+# app_notas_pract/.htaccess
 
-# Si no es un archivo o carpeta real, mándalo todo al index.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    # 1. Si alguien pide la raíz exacta, mándalo a public/
+    RewriteRule ^$ public/index.php [L]
+
+    # 2. Si piden cualquier otra cosa que NO sea un archivo real, mándalo a public/index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php [L]
+</IfModule>
+
+# Bloquea el listado de directorios (esto causa el 403 si no hay redirección)
+Options -Indexes

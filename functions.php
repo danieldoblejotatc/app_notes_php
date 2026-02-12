@@ -12,8 +12,7 @@
  */
 function base_path($path)
 {
-    // __DIR__ aquí es C:\xampp\htdocs\app_notas_pract
-    return __DIR__ . DIRECTORY_SEPARATOR . $path;
+    return BASE_PATH . $path;
 }
 
 /**

@@ -1,10 +1,11 @@
 <?php
 // controllers/notes/create.php
 
-require 'Validator.php';
+require base_path('Validator.php');
 
 $currentUserId = 2;
 $errors = [];
+$heading = 'Create Note';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!Validator::string($_POST['body'], 1, 1000)) {
@@ -26,6 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Cargar la vista al final, pasando los errores (estén vacíos o no)
 view('notes/note-create.view.php', [
-    'heading' => 'Create Note',
+    'heading' => $heading,
     'errors' => $errors
 ]);
